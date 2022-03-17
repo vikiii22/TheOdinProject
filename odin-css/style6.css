@@ -1,0 +1,25 @@
+.textoRojo{
+    color: red;
+    font-size: 24px;
+}
+
+.textoChiquito{
+    color: red;
+    font-size: smaller;
+}
+
+.verde{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.divVerde{
+    color: green;
+    font-size: 24px;
+}
+
+.divRojo{
+    color: red;
+    font-size: smaller;
+}
