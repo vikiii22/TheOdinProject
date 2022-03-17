@@ -1,0 +1,19 @@
+.id1{
+    background-color: lightpink;
+    font-family: 'verdana', 'DejaVu Sans', 'sans-serif';
+}
+
+.id1max{
+    font-size: 24px;
+}
+
+#idDiv1{
+    color: blue;
+    font-size: 36px;
+}
+
+#idP1{
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 24px;
+}
