@@ -1,0 +1,34 @@
+body{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.div1{
+    border: 2px solid blue;
+    background-color: lightpink;
+    text-align: left;
+    padding: 30px;
+    margin-top: 10px;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.div2{
+    background-color: aqua;
+    border: 2px solid red;
+    text-align: left;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 1em;
+}
+
+.div3{
+    background-color: bisque;
+    border: 2px solid red;
+    padding: 40px;
+    width: 200px;
+    text-align: left;
+    display: block;
+    margin-top: 5em;
+    margin-left: auto
+}

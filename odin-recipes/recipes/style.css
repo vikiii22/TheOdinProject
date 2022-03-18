@@ -43,3 +43,18 @@ ol, ul{
 ol ol{
     margin-left: 0px;
 }
+
+.pri{
+    color: rgb(43, 128, 226);
+    font-size: 10em;
+    text-align: center;
+    text-shadow:5px 5px rgba(76, 0, 255, 0.404);
+}
+
+.pri:visited{
+    color: black;
+}
+
+a:hover, .pri:hover{
+    color: burlywood;
+}
