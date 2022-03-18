@@ -64,4 +64,10 @@ article{
 
 .text button{
     font-size: 3em;
+    border-radius: 28px;
+    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+}
+
+.text button:hover{
+    background-image: -webkit-linear-gradient(top, #2079b0, #eb94d0);
 }
