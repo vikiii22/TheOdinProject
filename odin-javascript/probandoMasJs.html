@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probando más JS</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function add7(){
+            var numero=window.prompt("Introduce un número");
+            document.getElementById('num').value=parseInt(numero)+7;
+        }
+
+        function multiply(){
+            var num1=window.prompt("Introduce un número");
+            var num2=window.prompt("Introduce otro número");
+
+            document.getElementById('mul').value=parseInt(num1) * parseInt(num2);
+        }
+
+        function capitalize(){
+            var cad=window.prompt("Introduce una cadena");
+            for(var i=0; i<=cad.length; i++){
+                letra=cad[i].charAt(0);
+                cad[i]=letra + cad[i].substring(1, cad[i].length).toLowerCase();
+            }
+
+            texto="";
+            for(i=0; i<cad.length; i++){
+                if(i>0){
+                    texto+="";
+                }
+                texto+=cad[i];
+            }
+            cadenaNueva=cad.charAt(0).toUpperCase();
+            document.getElementById('cadena').value=cadenaNueva;
+            console.log(cadenaNueva)
+        }
+
+        function lastLetter(){
+            var cadena=window.prompt("Introduce una cadena");
+            var ultima=(cadena[cadena.length -1]);
+            document.getElementById('ulti').value=ultima;
+        }
+    </script>
+
+    <form onclick="add7()">
+        <input id="num" type="number" value="">Suma 7</input>
+    </form>
+
+    <form onclick="multiply()">
+        <input id="mul" type="number" value="">Multiplica
+    </form>
+
+    <form onclick="capitalize()">
+        <input id="cadena" type="text" value="">cadena de texto cap
+    </form>
+
+    <form onclick="lastLetter()">
+        <input id="ulti" type="text" value="">cadena de texto cap
+    </form>
+</body>
+</html>

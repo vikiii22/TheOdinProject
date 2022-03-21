@@ -45,7 +45,16 @@
        function eliminarColor(){
            document.getElementById('txt').style.backgroundColor=null;
        }
+
+       function incluirTexto(){
+            var nombre=window.prompt("Cual es tu nombre?")
+            document.getElementById('idForm').value=nombre;
+        }
     </script>
+
+    <form>
+        <input id="idForm" type="text" value="">
+    </form>
 
     <p id="txt">Texto</p>
     <button onclick="cambiaColor('blue');">Azul</button>
@@ -53,5 +62,6 @@
     <button onclick="cambiaColor('black');">Default</button>
     <button onclick="seleccionaBack('green');">Verde</button>
     <button onclick="eliminarColor();">Quitar</button>
+    <button onclick="incluirTexto()">Intro Datos</button>
 </body>
 </html>
