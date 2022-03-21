@@ -96,3 +96,21 @@ header{
     margin-right: 25%;
     font-weight: bold;
 }
+
+.card{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.card-body{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(29, 146, 255);
+    color: white;
+    gap: 10px;
+}
