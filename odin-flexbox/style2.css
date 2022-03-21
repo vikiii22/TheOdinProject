@@ -1,0 +1,20 @@
+.padre{
+    display: flex;
+    background-color: blanchedalmond;
+}
+
+.padre p{
+    flex:1;
+    background-color: aliceblue;
+    margin: 20px;
+    text-align: center;
+}
+
+.padre .logo{
+    flex: 6;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: orange;
+    font-size: 2em;
+}

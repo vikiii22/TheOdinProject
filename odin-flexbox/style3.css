@@ -1,0 +1,43 @@
+body{
+    background-color: grey;
+}
+
+.padre{
+    display: flex;
+    background-color: white;
+}
+
+.padre .logo{
+    flex: 1;
+    text-align: center;
+}
+
+.padre .enlace{
+    float: left;
+    flex: 1;
+}
+
+.derecha{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.derecha button{
+    float: right;
+    flex: 1;
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+}
+
+.derecha .bt1{
+    border-radius: 10%;
+}
+
+.circulo{
+    margin-left: 10px;
+    width: 5px;
+    height: 40px;
+    border-radius: 100%;
+}
