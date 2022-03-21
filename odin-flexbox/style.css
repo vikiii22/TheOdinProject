@@ -1,0 +1,63 @@
+.flex-container{
+    display:flex;
+}
+
+.flex-container div{
+    background-color: firebrick;
+    border: 4px solid rgb(255, 235, 119);
+    height: 100px;
+    flex: 1;
+}
+
+.flex-container .two{
+    display: flex;
+    border: 1px;
+}
+
+.centro{
+    display: flex;
+}
+
+.centro .grande{
+    background-color: aqua;
+    max-width: 400px;
+    height: 200px;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.centro .boss{
+    display: flex;
+    flex-direction: column;
+}
+
+.boss div{
+    background-color: aqua;
+    width: 400px;
+    height: 100px;
+    flex: 1;
+}
+
+.dividido1{
+    margin-bottom: 5px;
+}
+
+.tercero{
+    display: flex;
+}
+
+.morado, .naranja{
+    border: 3px solid blue;
+}
+
+.morado{
+    flex: 2;
+    background-color: blueviolet;
+    height: 100px;
+}
+
+.naranja{
+    flex: 1;
+    background-color: orange;
+    height: 100px;
+}
