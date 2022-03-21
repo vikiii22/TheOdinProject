@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript.js"></script>
+    <title>Probando JS</title>
+</head>
+<body>
+    <script>
+        console.log("Hola mundo");
+        console.log(23 + 97);
+        var n=0;
+        for (var i=1; i <= 6; i++){
+            let suma=n+i;
+            console.log(suma);
+        }
+
+        let a=10;
+        console.log(a);
+
+        let b=9*a;
+        console.log(b);
+
+        let c = 7 * a * b;
+        console.log(c);
+
+        let max=57;
+        let actual=max-13;
+        let percentage=actual/max;
+        console.log(percentage);
+
+       function cambiaColor(nuevoColor){
+           var col=document.getElementById('txt');
+           col.style.color=nuevoColor;
+       }
+
+       function seleccionaBack(color){
+        var let=document.getElementById('txt');
+        let.style.backgroundColor=color;
+        let.value="textos"
+       }
+
+       function eliminarColor(){
+           document.getElementById('txt').style.backgroundColor=null;
+       }
+    </script>
+
+    <p id="txt">Texto</p>
+    <button onclick="cambiaColor('blue');">Azul</button>
+    <button onclick="cambiaColor('red');">Rojo</button>
+    <button onclick="cambiaColor('black');">Default</button>
+    <button onclick="seleccionaBack('green');">Verde</button>
+    <button onclick="eliminarColor();">Quitar</button>
+</body>
+</html>
