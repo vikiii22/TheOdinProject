@@ -34,13 +34,27 @@ function playRound(playerSelection, computerSelection) {
     return mensaje;
 }
 
-function game() {
-    for (let index = 1; index <= 5; index++) {
-        const player = window.prompt().toLowerCase();
-        const computer = computerPlay();
-        console.log(playRound(player, computer));
+function eligeJugador() {
+    var piedra = document.getElementById('piedra');
+    var eleccion=null
+    if(piedra.click){
+        eleccion='piedra';
     }
-    console.log("Has ganado " + vecesGanadas + " veces");
+    return eleccion;
+}
+
+function game() {
+    if (eligeJugador() == null) {
+
+    } else {
+        for (let index = 1; index <= 5; index++) {
+            const player = eligeJugador().toLowerCase();
+            
+            const computer = computerPlay();
+            console.log(playRound(player, computer));
+        }
+        console.log("Has ganado " + vecesGanadas + " veces");
+    }
 }
 
 game();
