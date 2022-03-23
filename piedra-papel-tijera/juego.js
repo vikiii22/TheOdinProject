@@ -2,22 +2,15 @@ var opciones = [1, 2, 3];
 
 function computerPlay() {
     var compu = Math.floor((Math.random() * 3) + 1);
-    var elegido;
-    if (compu == 1) {
-        elegido = 1;
-    } else if (compu == 2) {
-        elegido = 2;
-    } else {
-        elegido = 3;
-    }
-    console.log(elegido);
-    return elegido;
+    return compu;
 }
 var vecesGanadas = 0;
+var computerSelection;
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection) {
     var mensaje;
-    if (eleccionUsua == 1) {
+    computerSelection=computerPlay();
+    if (playerSelection == 1) {
         if (opciones[computerSelection] == 1) {
             console.log("Empate");
             mensaje = "Empatador";
@@ -29,7 +22,7 @@ function playRound(playerSelection, computerSelection) {
             mensaje = "Ganador";
         }
     }
-    if (eleccionUsua == 2) {
+    if (playerSelection == 2) {
         if (opciones[computerSelection] == 1) {
             console.log("Ganas");
             mensaje = "Ganador";
@@ -41,7 +34,7 @@ function playRound(playerSelection, computerSelection) {
             mensaje = "Perdedor";
         }
     } 
-    if (eleccionUsua == 3) {
+    if (playerSelection == 3) {
         if (opciones[computerSelection] == 1) {
             console.log("Pierdes");
             mensaje = "Perdedor";
@@ -58,20 +51,14 @@ function playRound(playerSelection, computerSelection) {
         vecesGanadas++;
     }
 
+    var texto=document.getElementById('texto');
+    texto.textContent=mensaje;
     return mensaje;
-}
-
-var eleccionUsua = 3;
-
-function eligeUsuario(eleccionUsu) {
-    eleccionUsua=parseInt(eleccionUsu);
 }
 
 function game() {
     for (let index = 1; index <= 5; index++) {
-        const player = eligeUsuario(eleccionUsua);
-        const computer = computerPlay();
-        console.log(playRound(player, computer));
+        console.log(playRound());
     }
     console.log("Has ganado " + vecesGanadas + " veces");
 }
