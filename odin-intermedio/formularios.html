@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form>
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" placeholder="Jose Antonio" required><br>
+        <label for="apellido">Apellido: </label>
+        <input type="text" id="apellido"><br>
+        <label for="edad">Edad: </label>
+        <input type="number" id="edad"><br>
+        <button type="submit">Enviar</button>
+        <input type="password">
+    </form>
+    <select name="Coche">
+        <option value="default" selected>Default</option>
+        <option value="tesla">Tesla</option>
+        <option value="opel">Opel</option>
+        <option value="dacia">Dacia</option>
+        <option value="mercedes">Mercedes</option>
+    </select>
+
+    <select name="deportistas">
+        <optgroup label="Fútbol">
+            <option value="messi">Messi</option>
+            <option value="iniesta">Iniesta</option>
+            <option value="xavi">Xavi</option>
+        </optgroup>
+        <optgroup label="Baloncesto">
+            <option value="lebron">Lebron</option>
+            <option value="bryant">Bryant</option>
+            <option value="pippen">Pippen</option>
+        </optgroup>
+    </select><br>
+
+    <input type="radio" name="edades">
+    <label>Niño</label>
+    <input type="radio" name="edades">
+    <label>Adulto</label>
+    <input type="radio" name="edades">
+    <label>Anciano</label>
+</body>
+</html>

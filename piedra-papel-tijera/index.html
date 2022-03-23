@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="juego.js"></script>
     <title>Piedra Papel Tijera</title>
 </head>
+
 <body>
-    <button id="piedra" onclick="eligePiedra()">Piedra</button>
-    <script src="juego.js"></script>
+    <button id="piedra" onclick="eligeUsuario('1')">Piedra</button>
+    <button id="papel" onclick="eligeUsuario('2')">Papel</button>
+    <button id="tijera" onclick="eligeUsuario('3')">Tijera</button>
 </body>
+
 </html>
