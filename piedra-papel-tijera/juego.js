@@ -6,10 +6,11 @@ function computerPlay() {
 }
 var vecesGanadas = 0;
 var computerSelection;
+var rondas=0;
 
 function playRound(playerSelection) {
     var mensaje;
-    computerSelection=computerPlay();
+    computerSelection = computerPlay();
     if (playerSelection == 1) {
         if (opciones[computerSelection] == 1) {
             console.log("Empate");
@@ -21,6 +22,7 @@ function playRound(playerSelection) {
             console.log("Ganas");
             mensaje = "Ganador";
         }
+        rondas++;
     }
     if (playerSelection == 2) {
         if (opciones[computerSelection] == 1) {
@@ -33,7 +35,8 @@ function playRound(playerSelection) {
             console.log("Pierdes");
             mensaje = "Perdedor";
         }
-    } 
+        rondas++;
+    }
     if (playerSelection == 3) {
         if (opciones[computerSelection] == 1) {
             console.log("Pierdes");
@@ -45,14 +48,23 @@ function playRound(playerSelection) {
             console.log("Empatas");
             mensaje = "Empatador";
         }
+        rondas++;
     }
 
     if (mensaje == "Ganador") {
         vecesGanadas++;
     }
 
-    var texto=document.getElementById('texto');
-    texto.textContent=mensaje;
+    console.log("Has ganado " + vecesGanadas + " veces");
+
+    if(rondas>=5){
+        setTimeout(() => {
+            location.reload();
+        }, 1000);
+    }
+
+    var texto = document.getElementById('texto');
+    texto.textContent = mensaje;
     return mensaje;
 }
 
@@ -60,7 +72,6 @@ function game() {
     for (let index = 1; index <= 5; index++) {
         console.log(playRound());
     }
-    console.log("Has ganado " + vecesGanadas + " veces");
 }
 
 game();
