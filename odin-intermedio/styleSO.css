@@ -1,0 +1,26 @@
+:root{
+    --color-base-bg:rgb(240, 240, 240);
+    --color-base-text:black;
+    --theme-name:"light";
+}
+
+@media(prefers-color-scheme: dark){
+    :root{
+        --color-base-bg:black;
+        --color-base-text:white;
+        --theme-name:"dark";    
+    }
+}
+
+body{
+    background-color: var(--color-base-bg);
+    color: var(--color-base-text);
+}
+
+p{
+    font-size: 1em;
+}
+
+.theme-name::after{
+    content: var(--theme-name);
+}
