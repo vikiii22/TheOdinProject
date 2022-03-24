@@ -1,7 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+html{
+    font-family: 'Caveat', cursive;
+}
+
 table, tr, th{
     border: 1px solid black;
 }
 
 td{
     text-align: center;
+}
+
+a:link{
+    color: greenyellow;
+}
+
+a:visited{
+    color:burlywood;
+}
+
+.emoji::before{
+    content: '🤩🥴😍';
+}
+
+.emoji::after{
+    content: '😍🥴🤩';
 }
