@@ -12,7 +12,7 @@ html, body{
 
 .contenedor > .contenedor-imagen{
     display: flex;
-    flex: 0.25;
+    flex: 0.35;
     height: 100%;
     background-color: aqua;
 }
@@ -24,7 +24,7 @@ html, body{
 
 .contenedor > .contenedor-formulario{
     display: flex;
-    flex: 0.75;
+    flex: 0.65;
     background-color: rgb(238, 238, 238);
 }
 
@@ -94,4 +94,13 @@ html, body{
 .la4{
     grid-column: 2;
     grid-row: 1;
+}
+
+#btn{
+    background-color: rgb(51, 95, 51);
+    font-weight: bold;
+}
+
+#log{
+    color: rgb(51, 95, 51);
 }
