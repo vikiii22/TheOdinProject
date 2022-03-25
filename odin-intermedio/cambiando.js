@@ -8,3 +8,15 @@ function setTheme() {
 }
 
 document.querySelector('.cambiaColor').addEventListener('click', setTheme);
+
+function double() {
+    var number = [1, 2, 3, 4];
+    var elDoble = [];
+
+    for (var i = 0; i < number.length; i++) {
+        elDoble = number[i] * 2;
+        console.log(elDoble);
+    }
+}
+
+double();
