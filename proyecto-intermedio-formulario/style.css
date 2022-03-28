@@ -38,6 +38,18 @@ html, body{
     text-align: justify;
 }
 
+.card-body{
+    position: absolute;
+    width: 35%;
+    background: black;
+    opacity: 0.6;
+    color: white;
+    top: 8em;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .formulario{
     display: grid;
     grid-template-columns: 2;
