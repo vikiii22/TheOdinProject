@@ -1,0 +1,22 @@
+.contenedor{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 75px 75px 75px;
+    grid-template-rows: 75px 75px 75px;
+}
+
+.contenedor div{
+    border: 1px solid black;
+}
+
+.item{
+    background-color: orange;
+}
+
+.primera-fila{
+    background-color: pink;
+}
+
+.ultima-columna{
+    background-color: bisque;
+}
