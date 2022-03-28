@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probando JS</title>
+</head>
+
+<body>
+    <p id="enhorabuena"></p>
+    <img id="imagen" src="">
+    <button id="cambiaImagen">Cambiar</button>
+    <script>
+        var precioCoche = 6000;
+        var dineroAhorrado = window.prompt("Cuanto dinero tienes ahorrado?");
+        var edad = window.prompt("Cuantos años tienes?");
+        var coches = document.getElementById("imagen");
+
+        function cambiar() {
+            if (document.getElementById("cambiaImagen").click) {
+                if (coches.src.match("cochecito")) {
+                    coches.src = "picante.jpg"
+                } else {
+                    coches.src = "cochecito.jpg"
+                }
+            }
+        }
+
+        if (dineroAhorrado >= precioCoche && edad >= 18) {
+            alert("Puedes comprarte el coche");
+            document.getElementById("enhorabuena").textContent = "Enhorabuena crack, buen carro!";
+            coches.src = "cochecito.jpg";
+            document.getElementById("cambiaImagen").addEventListener("click", cambiar)
+        } else {
+            alert("No puedes comprarte el coche");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.contenedor{
+    display: grid;
+    background-color: lightblue;
+    grid-template: repeat(2, 1fr) / repeat(5, 1fr);
+    resize: both; /*Esta propiedad sirve para cambiar el tamaño de un contenedor haciendo click y arrastrando desde la esquina inferior derecha*/
+    overflow: auto; /*Esta propiedad nos permite habilitar el desplazamiento si cambiamos el tamaño del contenedor*/
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    column-gap: 5px;
+    row-gap: 50px;
+}
+
+.grid-item{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(119, 116, 116);
+    color: white;
+    font-size: 1.2em;
+    padding: 12px;
+}
