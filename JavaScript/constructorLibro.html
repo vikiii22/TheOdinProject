@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="anyadir">Añadir libro</button>
+    <script>
+        let biblioteca = [];
+
+        function Libros(titulo, autor, fecha, paginas) {
+            this.titulo = titulo;
+            this.autor = autor;
+            this.fecha = fecha;
+            this.paginas = paginas;
+        }
+
+        function info(libro) {
+            return ("El libro " + libro.titulo + " tiene estos atributos: " + libro.autor + " " + libro.fecha + " " + libro.paginas)
+        }
+
+        function anyadirNuevoLibro() {
+            var titulo = window.prompt("Título");
+            var autor = window.prompt("Autor");
+            var fecha = window.prompt("Fecha");
+            var paginas = window.prompt("Páginas");
+            var nuevo = new Libros(titulo, autor, fecha, paginas);
+            biblioteca.push(nuevo);
+        }
+
+        var btAnyadir=document.getElementById("anyadir");
+        btAnyadir.addEventListener('click', anyadirNuevoLibro);
+
+        var theHobbit = new Libros('El hobbit', 'Tolkien', ' 1992', '1000');
+        var harryPotter = new Libros('Harry Potter', 'J.K. Rowling', '2001', '675');
+        biblioteca.push(theHobbit);
+        biblioteca.push(harryPotter);
+        //anyadirNuevoLibro();
+
+        biblioteca.forEach(b => console.log(b));
+    </script>
+</body>
+
+</html>
