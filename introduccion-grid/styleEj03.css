@@ -30,6 +30,21 @@ header{
     overflow: auto;
 }
 
+.sidebar{
+    display: grid;
+    grid-template-rows: repeat(4, 50fr);
+    background-color:rgb(247, 182, 151);
+}
+
+.tarjeta{
+    margin: 10px;
+    background-color: aliceblue;
+    text-align: center;
+    align-items: center;
+    overflow: auto;
+    border-radius: 10%;
+}
+
 .articulo{
     display: grid;
     grid-template-rows: 30fr 200fr;
@@ -38,6 +53,7 @@ header{
     text-align: center;
     grid-gap: 10px;
     overflow: auto;
+    background-color: lightblue;
 }
 
 #en1, #en2, #en3{
@@ -45,4 +61,9 @@ header{
     padding: 10px;
     font-weight: bold;
     color: white;
+}
+
+.articulo1{
+    margin: 10px;
+    background-color: aliceblue;
 }
