@@ -9,15 +9,17 @@
 </head>
 
 <body>
-    <button id="anyadir">Añadir libro</button>
+    <button id="anyadir" onclick="anyadirNuevoLibro()">Añadir libro</button>
+    <button id="anyadir" onclick="recargar()">recargar</button>
     <script>
         let biblioteca = [];
 
-        function Libros(titulo, autor, fecha, paginas) {
+        function Libros(titulo, autor, fecha, paginas, imagen) {
             this.titulo = titulo;
             this.autor = autor;
             this.fecha = fecha;
             this.paginas = paginas;
+            this.imagen = imagen;
         }
 
         function info(libro) {
@@ -29,15 +31,18 @@
             var autor = window.prompt("Autor");
             var fecha = window.prompt("Fecha");
             var paginas = window.prompt("Páginas");
-            var nuevo = new Libros(titulo, autor, fecha, paginas);
+            var imagen=window.prompt("Imagen?");
+            var nuevo = new Libros(titulo, autor, fecha, paginas, imagen);
             biblioteca.push(nuevo);
         }
 
-        var btAnyadir=document.getElementById("anyadir");
-        btAnyadir.addEventListener('click', anyadirNuevoLibro);
+        function recargar() {
+            biblioteca.forEach(b => console.log(info(b)));
+            console.log(biblioteca.length);
+        }
 
-        var theHobbit = new Libros('El hobbit', 'Tolkien', ' 1992', '1000');
-        var harryPotter = new Libros('Harry Potter', 'J.K. Rowling', '2001', '675');
+        var theHobbit = new Libros('El hobbit', 'Tolkien', ' 1992', '1000', 'hobbit.jpg');
+        var harryPotter = new Libros('Harry Potter', 'J.K. Rowling', '2001', '675', 'harrypotter.jpg');
         biblioteca.push(theHobbit);
         biblioteca.push(harryPotter);
         //anyadirNuevoLibro();
