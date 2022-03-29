@@ -7,3 +7,20 @@ const miObjeto={
 }
 
 miObjeto.property;
+
+
+
+
+
+
+
+function Cafe(){
+
+}
+
+var cafe=new Cafe();
+if(cafe.vacio){
+    cafe.rellenar();
+}else{
+    cafe.beber();
+}

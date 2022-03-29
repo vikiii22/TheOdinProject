@@ -1,0 +1,12 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 150fr);
+    grid-template-rows: auto 100fr;
+    text-align: center;
+    align-items: center;
+}
+
+.contenedor img{
+    width: 200px;
+    height: 300px;
+}

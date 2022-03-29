@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
+    <div class="contenedor">
+        <div class="imagen"><img src="hobbit.jpg"></div>
+    </div>
     <button id="anyadir" onclick="anyadirNuevoLibro()">Añadir libro</button>
     <button id="anyadir" onclick="recargar()">recargar</button>
+    <button id="eliminar" onclick="eliminar()">Eliminar</button>
     <script>
         let biblioteca = [];
 
@@ -36,13 +41,31 @@
             biblioteca.push(nuevo);
         }
 
+        var imagen=document.createElement('img');
+
         function recargar() {
+            var imagenes=document.createElement('img');
+            var tituloIm=document.createElement('p');
             biblioteca.forEach(b => console.log(info(b)));
+            biblioteca.forEach(b => imagenes.src=b.imagen);
+            biblioteca.forEach(b => tituloIm.textContent=b.titulo);
+            document.querySelector('.contenedor').appendChild(imagenes);
             console.log(biblioteca.length);
+        }
+
+        function eliminar(){
+            var aEliminar=window.prompt("Que libro?");
+            biblioteca.forEach(b => {
+                if(aEliminar==b.titulo){
+                    biblioteca.splice(0, biblioteca.length, b.titulo)
+                }
+            })
         }
 
         var theHobbit = new Libros('El hobbit', 'Tolkien', ' 1992', '1000', 'hobbit.jpg');
         var harryPotter = new Libros('Harry Potter', 'J.K. Rowling', '2001', '675', 'harrypotter.jpg');
+        imagen.src=harryPotter.imagen;
+        document.querySelector('.contenedor').appendChild(imagen);
         biblioteca.push(theHobbit);
         biblioteca.push(harryPotter);
         //anyadirNuevoLibro();
