@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación Pelea</title>
+</head>
+
+<body>
+    <script>
+        const Jugador = (nombre, nivel) => {
+            var vida = nivel * 2;
+            const getNivel = () => nivel;
+            const getNombre = () => nombre;
+            const muerte = () => {
+                return console.log("Has muerto");
+            };
+
+            const danyo = cantidadDanyo => {
+                vida -= cantidadDanyo;
+                if (vida <= 0){
+                    muerte();
+                }
+            };
+
+            const ataque = ata => {
+                if(nivel < ata.getNivel()){
+                    danyo(1);
+                    console.log(ata.getNombre() + " ha pegado a " + nombre);
+                }
+                if(nivel >= ata.getNivel()){
+                    ata.danyo(1);
+                    console.log(nombre + " ha pegado a " + ata.getNombre());
+                }
+            };
+            return {ataque, danyo, getNivel, getNombre};
+        };
+
+        const j1=Jugador('Pedro', 23);
+        const j2=Jugador('Antonio', 10);
+        j1.ataque(j2);
+    </script>
+</body>
+
+</html>
