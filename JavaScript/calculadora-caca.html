@@ -10,6 +10,21 @@
 
 <body>
     <script>
+        function Calculadora(){
+            this.suma=function(num1, num2){
+                return num1 + num2;
+            }
+            this.multi=function(num1, num2){
+                return num1 * num2;
+            }
+        }
+
+        var cal=new Calculadora();
+        console.log("Suma: " + cal.suma(5, 10));
+        console.log("Multi: " + cal.multi(34, 87));
+
+        //Diferentes métodos, me gusta más el de arriba
+
         const calculadora = (() => {
             const suma = (num1, num2) => num1 + num2;
             const multi = (num1, num2) => num1 * num2;
