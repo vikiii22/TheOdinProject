@@ -19,7 +19,6 @@ const casillaPulsada = (e, pos) =>{
     tablero[pos] = color;
     if(ganador()){
         alert('Enhorabuena jugador ' + color);
-        //miBoton.disabled=true;
         document.querySelectorAll('button').forEach(apagar => apagar.disabled=true);
         document.querySelector('.ganador').textContent="Ha ganado " + color;
     }
