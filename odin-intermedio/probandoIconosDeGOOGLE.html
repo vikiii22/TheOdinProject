@@ -16,5 +16,29 @@
 </head>
 <body>
     <i class="material-icons">home</i>
+    <script>
+        class buenosDias{
+            nombre=function(){
+                return window.prompt("Escribe un nombre")
+            }
+            saluda=function(){
+                return "Buenos días " + this.nombre()
+            }
+        }
+
+        var mensaje=new buenosDias();
+        console.log(mensaje.saluda());
+        //console.log(buenosDias());
+
+        const hola = (() =>{
+            const nombre = () => window.prompt("Nombre")
+            const men = () => nombre() + " Buenos días"
+            return{
+                men,
+            }
+        })();
+
+        console.log(hola.men());
+    </script>
 </body>
 </html>
