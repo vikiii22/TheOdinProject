@@ -11,19 +11,61 @@
 <body>
     <form>
         <label for="mail">Escribe tu correo</label>
-        <input type="email" id="mail" name="mail">
+        <input type="email" id="mail" name="mail"><br>
+        <label for="pass">Introduce tu contraseña</label>
+        <input type="password" id="pass" name="pass"><br>
+        <label for="pass2">Introduce tu contraseña de nuevo</label>
+        <input type="password" id="pass2" name="pass2"><br>
+        <label for="cp">Introduce tu código postal</label>
+        <input type="number" id="cp" name="cp">
         <button type="submit">Enviar</button>
     </form>
     <script>
         const email = document.getElementById('mail');
-        email.addEventListener('input', function (e) {
-            if(email.validity.typeMismatch){
-                email.setCustomValidity("Estaba esperando una dirección de correo");
-                email.reportValidity();
-            }else{
-                email.setCustomValidity("");
-            }
-       });
+        const pass = document.getElementById('pass');
+        const pass2 = document.getElementById('pass2');
+        const cp = document.getElementById('cp');
+
+        if (email.value = "" || pass.value == "" || cp.value == "") {
+
+        } else {
+            email.addEventListener('input', function (e) {
+                if (email.validity.typeMismatch || email.value == "") {
+                    email.setCustomValidity("Estaba esperando una dirección de correo");
+                    email.reportValidity();
+                } else {
+                    email.setCustomValidity("");
+                }
+            });
+
+            pass.addEventListener('input', function (e) {
+                if (pass.value.length <= 8) {
+                    pass.setCustomValidity("La contraseña debe tener 8 carácteres mínimo");
+                }
+                else {
+                    pass.setCustomValidity("");
+                }
+            });
+
+            pass2.addEventListener('input', function () {
+                if (pass.value == pass2.value) {
+                    pass.setCustomValidity("");
+                    pass2.setCustomValidity("");
+                } else {
+                    pass.setCustomValidity("");
+                    pass2.setCustomValidity("");
+                }
+            });
+
+            cp.addEventListener('input', function () {
+                if (cp.value.length <= 4) {
+                    cp.setCustomValidity("Código postal incorrecto");
+                    cp.reportValidity();
+                } else {
+                    cp.setCustomValidity("");
+                }
+            });
+        }
     </script>
 </body>
 
