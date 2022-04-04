@@ -41,6 +41,7 @@
             pass.addEventListener('input', function (e) {
                 if (pass.value.length <= 8) {
                     pass.setCustomValidity("La contraseña debe tener 8 carácteres mínimo");
+                    pass.reportValidity();
                 }
                 else {
                     pass.setCustomValidity("");
