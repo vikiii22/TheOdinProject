@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: wheat;
+}
+
+.conten-menu{
+    width: 400px;
+    margin: 50px auto;
+}
+
+.conten-menu .content-enlace{
+    box-sizing: 0px 0px 2px 1px white;
+}
+
+.conten-menu .content-enlace .opcion{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    padding: 13px 15px;
+    font-size: 22px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.conten-menu .content-enlace .opcion .icono{
+    background-color: aliceblue;
+    color: cadetblue;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    width: 26px;
+    border-radius: 5px;
+}
+
+.conten-menu .content-enlace .enlace{
+    height: 0;
+    overflow: hidden;
+}
+
+.conten-menu .content-enlace .animation{
+    height: 100%;
+}
+
+.conten-menu .content-enlace .enlace a{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: brown;
+    background-color: rgb(241, 188, 90);
+}
+
+
+
+.conten-menu .content-enlace .enlace a:hover{
+    background-color: aquamarine;
+    color: white;
+}
