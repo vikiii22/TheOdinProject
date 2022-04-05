@@ -14,7 +14,7 @@ const cargarDatos = () => {
     }
 
     async function getTiempo() {
-        const datos = await fetch('http://api.openweathermap.org/data/2.5/weather?q=' + elegido.value + '&APPID=a9dcdf77bfc1bf02db60cce90cfabad6', { mode: 'cors' });
+        const datos = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + elegido.value + '&APPID=72cf92c0ece57202cb1e178d950a6393', { mode: 'cors' });
         const tiempo = await datos.json();
         console.log(tiempo);
         tiempo.weather.forEach(e => {
